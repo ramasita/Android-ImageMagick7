@@ -9,6 +9,7 @@ LOCAL_C_INCLUDES  :=  \
     $(IMAGE_MAGICK) \
     $(IMAGE_MAGICK)/MagickCore \
     $(IMAGE_MAGICK)/MagickWand \
+    $(IMAGE_MAGICK)/Magick++/lib \
     $(PNG_LIB_PATH) \
     $(JPEG_LIB_PATH) \
 
@@ -57,12 +58,14 @@ endif
 ifeq ($(BUILD_MAGICKWAND),true)
     ifeq ($(STATIC_BUILD),true)
         LOCAL_STATIC_LIBRARIES := \
-            libmagickcore-7
+            libmagickcore-7 \
+            libmagick++-7
             
         include $(BUILD_STATIC_LIBRARY)
     else
         LOCAL_SHARED_LIBRARIES := \
-            libmagickcore-7
+            libmagickcore-7 \
+            libmagick++-7
             
         include $(BUILD_SHARED_LIBRARY)
     endif
