@@ -23,11 +23,11 @@ jobs:
       # This must be run as cmd /c to redirect output properly
       # because powershell considers stderr an error and doesn't
       # log it into the output properly
-      - name: build
+      - name: Static Library Build
         id: build
         continue-on-error: true
         run: |
-          ./.github-deps/change-to-shared-lib.ps1
+          ./.github-deps/change-to-static-lib.ps1
           cmd /c "build-release 2> errors.txt"
 
       - name: Set error-log to var
