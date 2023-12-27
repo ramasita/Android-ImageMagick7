@@ -41,16 +41,16 @@ LOCAL_SRC_FILES := \
 ifeq ($(BUILD_MAGICKPP),true)
     ifeq ($(STATIC_BUILD),true)
         LOCAL_STATIC_LIBRARIES := \
-          libmagick++-7 \
           libmagickcore-7 \
-          libmagickwand-7
+          libmagickwand-7 \
+          libmagick++-7
 
         include $(BUILD_STATIC_LIBRARY)
     else
         LOCAL_SHARED_LIBRARIES := \
-          libmagick++-7 \
           libmagickcore-7 \
-          libmagickwand-7
+          libmagickwand-7 \
+          libmagick++-7
 
         include $(BUILD_SHARED_LIBRARY)
     endif
