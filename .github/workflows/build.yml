@@ -44,7 +44,10 @@ jobs:
         if: steps.build.outcome == 'success'
         with:
           name: imagemagick-7-android
-          path: jniLibs
+          path: |
+            jniLibs
+            build/**
+          if-no-files-found: warn
       
       - uses: mshick/add-pr-comment@v1
         name: Add error log to PR
