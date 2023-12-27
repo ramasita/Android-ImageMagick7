@@ -24,14 +24,14 @@ LOCAL_SRC_FILES := \
 
 ifeq ($(STATIC_BUILD),true)
     LOCAL_STATIC_LIBRARIES := \
-        libmagick++-7 \
         libmagickcore-7 \
-        libmagickwand-7
+        libmagickwand-7 \
+        libmagick++-7
 else
     LOCAL_SHARED_LIBRARIES := \
-        libmagick++-7 \
         libmagickcore-7 \
-        libmagickwand-7
+        libmagickwand-7 \
+        libmagick++-7
 endif
 
 # compiling with openCL support
