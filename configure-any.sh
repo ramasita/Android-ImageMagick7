@@ -18,7 +18,7 @@ export CXX=$ANDROID_LLVM_ROOT/${ANDROID_HOST}${ANDROID_VERSION}-clang++
 export ac_cv_func_malloc_0_nonnull=yes
 export ac_cv_func_realloc_0_nonnull=yes
 export PATH=$ANDROID_NDK/toolchains/$ANDROID_HOST-$ANDROID_TOOLCHAIN_VERSION/prebuilt/$ANDROID_BUILD/bin:$PATH
-./configure --host=$ANDROID_HOST --target=$ANDROID_HOST --with-sysroot=$ANDROID_SYSROOT
+./configure --host=$ANDROID_HOST --target=$ANDROID_HOST --with-sysroot=$ANDROID_SYSROOT --enable-shared=no --enable-static=yes
 
 # liblzma configure
 --disable-xzdec --disable-lzmadec --disable-lzmainfo --disable-lzma-links --disable-scripts --host=$ANDROID_HOST --target=$ANDROID_HOST --with-sysroot=$ANDROID_SYSROOT
