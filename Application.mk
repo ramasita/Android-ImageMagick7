@@ -61,10 +61,10 @@ QUANTUM_DEPTH := 16
 
 STATIC_BUILD     := true
 # magick bin requires magick wand API
-BUILD_MAGICK_BIN := true
+BUILD_MAGICK_BIN := false
 BUILD_MAGICKWAND := true
 # requires magickwand
-BUILD_MAGICKPP   := false
+BUILD_MAGICKPP   := true
 
 
 #------------------------------------------
