@@ -75,7 +75,7 @@ BUILD_MAGICKPP   := true
 # openCL build requires special setup. Check the libopencl
 # directory for more information
 OPENCL_BUILD     := false
-OPENMP_BUILD     := true
+OPENMP_BUILD     := false
 
 
 #------------------------------------------
