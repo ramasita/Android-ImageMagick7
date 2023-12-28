@@ -46,7 +46,8 @@ jobs:
           name: imagemagick-7-android
           path: |
             jniLibs
-            build/**
+            build/local/arm64-v8a/*.a
+            build/local/arm64-v8a/*.so
           if-no-files-found: warn
       
       - uses: mshick/add-pr-comment@v1
